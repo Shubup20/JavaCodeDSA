@@ -1,7 +1,7 @@
 package SC.skills;
 
 public class App {
-    public String str_1 = "I am a public memeber";
+    protected String str_1 = "I am a public memeber";
 
     void printFromClass() {
         System.out.println("within Class: " + str_1);
