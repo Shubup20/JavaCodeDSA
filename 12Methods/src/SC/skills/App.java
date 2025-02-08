@@ -1,7 +1,7 @@
 package SC.skills;
 
 public class App {
-    String str_1 = "I am a default member";
+   private String str_1 = "I am a default member";
 
     void printFromClass() {
         System.out.println("within Class: " + str_1);
@@ -20,6 +20,6 @@ public class App {
 class App2 {
 void printOfOutsideClass(){
     App obj = new App();
-    System.out.println("within package , outside class: " + obj.str_1);
+//    System.out.println("within package , outside class: " + obj.str_1);
 }
 }
