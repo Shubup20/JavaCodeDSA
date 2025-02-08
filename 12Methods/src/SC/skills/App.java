@@ -1,7 +1,7 @@
 package SC.skills;
 
 public class App {
-    protected String str_1 = "I am a public memeber";
+    String str_1 = "I am a default member";
 
     void printFromClass() {
         System.out.println("within Class: " + str_1);

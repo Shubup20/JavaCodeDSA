@@ -17,6 +17,6 @@ public class OutsideSCSkills {
 class App3 extends App {
     void printFromChildClass() {
         App3 obj3 = new App3();
-        System.out.println("Child class: "+obj3.str_1);
+//        System.out.println("Child class: "+obj3.str_1);
     }
 }
