@@ -1,11 +1,41 @@
 class ArrayExample {
 
+    void searchArray() {
+        int[] arr = {2, 8, 19, 2, 7};
+
+        int x = 19;
+        int ans = -1;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+            ans = i;
+            }
+            System.out.println("Found " + "x" + ans);
+        }
+    }
+
+    void maxNum() {
+        int[] arr = {2, 8, 19, 2, 7};
+
+
+        int maxNum = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (maxNum < arr[i]) {
+                maxNum = arr[i];
+            }
+        }
+
+        System.out.println("maxNum is : " + maxNum);
+
+    }
+
+
     void multiArray() {
 //        int[][] arr_1= new int[5][3];
-        int[][] arr = {{56,44,85},{34,7,8}};
+        int[][] arr = {{56, 44, 85}, {34, 7, 8}};
 
-        for (int i=0;i<2;i++) {
-            for (int j=0;j<3;j++) {
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
                 System.out.println(arr[i][j]);
 
 
@@ -49,8 +79,8 @@ class ArrayExample {
 //            System.out.println(age);
 //        }
 
-        int i=0;
-        while (i<3){
+        int i = 0;
+        while (i < 3) {
             System.out.println(ages[i]);
             ++i;
         }
@@ -63,8 +93,9 @@ public class Main {
 //        obj.demoArray();
 
 
-
         obj.multiArray();
 
+        obj.maxNum();
+        obj.searchArray();
     }
 }
