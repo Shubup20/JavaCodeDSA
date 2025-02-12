@@ -2,10 +2,16 @@ class ArrayExample {
 
     void multiArray() {
 //        int[][] arr_1= new int[5][3];
-        int[][] arr = {{56,44,85},{84,45,65},{8,5,7}};
-        System.out.println(arr[0][0]);
-        System.out.println(arr[0][1]);
-        System.out.println(arr[0][2]);
+        int[][] arr = {{56,44,85},{34,7,8}};
+
+        for (int i=0;i<2;i++) {
+            for (int j=0;j<3;j++) {
+                System.out.println(arr[i][j]);
+
+
+            }
+        }
+
 
 //        int[][][] arr_3 = new int[5][3][2];//5*3*2=30
 //        arr_3[0][0][0] = 1;
@@ -13,7 +19,7 @@ class ArrayExample {
 
     void demoArray() {
         int[] ages = new int[5];
-        String[] names = {"rahul", "Raj", "Adhara"};
+//        String[] names = {"rahul", "Raj", "Adhara"};
 
 
         ages[0] = 34;
@@ -23,24 +29,38 @@ class ArrayExample {
 //    ages[5] = 78;
 //    ages[-4] = 45;
 
-
-        System.out.println(names[0]);
-        System.out.println(names[1]);
-        System.out.println(names[2]);
-
-
-        System.out.println(ages[0]);
-        System.out.println(ages[1]);
-        System.out.println(ages[2]);
 //
+//        System.out.println(names[0]);
+//        System.out.println(names[1]);
+//        System.out.println(names[2]);
+
+
+//        System.out.println(ages[0]);
+//        System.out.println(ages[1]);
+//        System.out.println(ages[2]);
+////
 //   System.out.println(ages[-4]);
+
+//        for(int i = 0 ;i<3;i++){
+//            System.out.println(ages[i]);
+//        }
+
+//        for(int age:ages){
+//            System.out.println(age);
+//        }
+
+        int i=0;
+        while (i<3){
+            System.out.println(ages[i]);
+            ++i;
+        }
     }
 }
 
 public class Main {
     public static void main(String[] args) {
         ArrayExample obj = new ArrayExample();
-        obj.demoArray();
+//        obj.demoArray();
 
 
 
