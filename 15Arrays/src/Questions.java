@@ -3,16 +3,17 @@ import java.util.Scanner;
 
 public class Questions {
 
-    static int[] smallestAndLargestElement(int[] arr){
+
+    static int[] smallestAndLargestElement(int[] arr) {
         Arrays.sort(arr);
-        int[] ans = {arr[0],arr[arr.length-1]};
-        return  ans;
+        int[] ans = {arr[0], arr[arr.length - 1]};
+        return ans;
     }
 
-    static  boolean isSorted(int[] arr){
+    static boolean isSorted(int[] arr) {
         boolean check = true;
-        for(int i=1;i<arr.length;i++){
-            if(arr[i]<arr[i-1]){
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) {
                 // not shorted
 
                 check = false;
@@ -20,27 +21,27 @@ public class Questions {
             }
         }
 
-        return  check;
+        return check;
     }
 
-    static int countStrictlyGreater(int[] arr,int x){
+    static int countStrictlyGreater(int[] arr, int x) {
         int count = 0;
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]>x){
-                count ++;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > x) {
+                count++;
             }
         }
         return count;
     }
 
-    static int lastOccurrence(int[] arr,int x){
+    static int lastOccurrence(int[] arr, int x) {
         int lastIndex = -1;
-        for(int i =0;i< arr.length;i++){
-            if(arr[i]==x){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
                 lastIndex = i;
             }
         }
-        return  lastIndex;
+        return lastIndex;
     }
 
     static int countOccurrence(int[] arr, int x) {
@@ -70,12 +71,14 @@ public class Questions {
 
 
         System.out.println("Count of X :" + countOccurrence(arr, x));
-        System.out.println("Last occurrence of x: "+ lastOccurrence(arr,x));
-        System.out.println("Count of the number of  element Strictly Greater then: "+ countStrictlyGreater(arr,x));
-        System.out.println("Array is Shorted is : "+ isSorted(arr));
+        System.out.println("Last occurrence of x: " + lastOccurrence(arr, x));
+        System.out.println("Count of the number of  element Strictly Greater then: " + countStrictlyGreater(arr, x));
+        System.out.println("Array is Shorted is : " + isSorted(arr));
 
         int[] ans = smallestAndLargestElement(arr);
         System.out.println("SmallestAndLargestElement Array: " + ans[0] + "==" + ans[1]);
+
+
     }
-    }
+}
 
