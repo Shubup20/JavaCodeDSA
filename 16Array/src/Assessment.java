@@ -5,9 +5,16 @@ public class Assessment {
 
     static int lastRepeatingNumber(int[] arr){
         int n = arr.length -1;
-        for(int i=n;i>0;i--){
-            for(int j=n-1;j>0;j--){
-                if(arr[i]==arr[j]){
+        for(int i=n;i>=0;i--){
+            System.out.print("i "+i);
+            System.out.println();
+            for(int j=n-1;j>=0;j--){
+                System.out.print("j "+j);
+                System.out.println();
+                System.out.print("arr[i]"+ arr[i] +"arr[j]"+arr[j]);
+                System.out.println();
+                if(arr[i]==arr[j] && i!=j){
+                    System.out.print("arr[i]:"+arr[i]);
                     return arr[i];
                 }
             }
