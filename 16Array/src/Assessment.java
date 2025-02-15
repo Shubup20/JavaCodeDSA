@@ -2,19 +2,15 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Assessment {
-
+// 2 4 8 4 84 54
     static int lastRepeatingNumber(int[] arr){
         int n = arr.length -1;
-        for(int i=n;i>=0;i--){
-            System.out.print("i "+i);
-            System.out.println();
-            for(int j=n-1;j>=0;j--){
-                System.out.print("j "+j);
-                System.out.println();
-                System.out.print("arr[i]"+ arr[i] +"arr[j]"+arr[j]);
-                System.out.println();
-                if(arr[i]==arr[j] && i!=j){
-                    System.out.print("arr[i]:"+arr[i]);
+        for(int i=n;i>0;i--){
+
+            for(int j=i-1;j>=0;j--){
+                System.out.println(arr[i] +" " + arr[j]);
+                if(arr[i]==arr[j]){
+
                     return arr[i];
                 }
             }
