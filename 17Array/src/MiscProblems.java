@@ -63,7 +63,7 @@ public class MiscProblems {
         System.out.println();
     }
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         int a = 9;
         int b = 3;
         int[] arr = {1, 2, 3, 4, 5,6};
