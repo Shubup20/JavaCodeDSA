@@ -75,6 +75,7 @@ public class SortArray {
     }
 
 
+
     static int[] sortSquares(int[] arr) {
         int n = arr.length;
         int left = 0, right = n - 1;
