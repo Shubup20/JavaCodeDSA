@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class SortArray {
 
+
     static void printArray(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n; i++) {
@@ -15,6 +16,29 @@ public class SortArray {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+
+    }
+
+    static void sortArrayParity(int[] arr) {
+        int n = arr.length;
+
+        int left = 0, right = n - 1;
+
+        while (left < right) {
+            if (arr[left] % 2 == 1 && arr[right] % 2 == 0) {
+                swap(arr, left, right);
+                left++;
+                right--;
+            }
+
+            if (arr[left] % 2 == 0) {
+                left++;
+            }
+
+            if (arr[right] % 2 == 1) {
+                right--;
+            }
+        }
 
     }
 
@@ -38,6 +62,39 @@ public class SortArray {
             }
         }
     }
+
+    static void reverse(int[] arr) {
+        int i = 0, j = arr.length - 1;
+
+        while (i < j) {
+            swap(arr, i, j);
+            i++;
+            j--;
+        }
+
+    }
+
+
+    static int[] sortSquares(int[] arr) {
+        int n = arr.length;
+        int left = 0, right = n - 1;
+        int[] ans = new int[n];
+
+        int k = 0;
+
+        while (left <= right) {
+            if (Math.abs(arr[left]) > Math.abs(arr[right])) {
+                ans[k++] = arr[left] * arr[left];
+                left++;
+            } else {
+                ans[k++] = arr[right] * arr[right];
+                right--;
+            }
+        }
+
+        return ans;
+    }
+
 
     static void sortZeroesAndOne2(int[] arr) {
         int n = arr.length;
@@ -76,9 +133,12 @@ public class SortArray {
         System.out.print("Original array: ");
         printArray(arr);
 //        sortZeroesAndOnes(arr);
-        sortZeroesAndOne2(arr);
+//        sortZeroesAndOne2(arr);
+//        sortArrayParity(arr);
+        int[] ans = sortSquares(arr);
+        reverse(ans);
         System.out.println("Sorted array: ");
-        printArray(arr);
+        printArray(ans);
 
     }
 }
