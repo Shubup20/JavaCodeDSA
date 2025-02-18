@@ -11,12 +11,10 @@ public class PrefixSum {
 
     static int[] makePrefixSumArray(int[] arr) {
         int n = arr.length;
-        int[] pref = new int[n];
-        pref[0] = arr[0];
         for(int i =1 ;i<n;i++){
-            pref[i] = pref[i-1] + arr[i];
+            arr[i] = arr[i-1] + arr[i];
         }
-        return pref;
+        return arr;
     }
 
     public static void main(String[] args) {
