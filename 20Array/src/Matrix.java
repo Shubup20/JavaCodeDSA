@@ -29,6 +29,25 @@ public class Matrix {
         printArray(sum);
     }
 
+    static void multiply(int[][] arr, int r1, int c1, int[][] arr2, int r2, int c2) {
+        if (c1 != r2) {
+            System.out.println("Wrong arr multiply not posible");
+            return;
+        }
+
+        int[][] mul = new int[r1][c2]; //by default initialize start 0
+
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < c2; j++) {
+                for (int k = 0; k < c1; k++) {
+//                    mul[i][j]=ith row of a * jth col of b
+                    mul[i][j] += (arr[i][k] * arr2[k][j]);
+                }
+            }
+        }
+        System.out.println("Mul of 2 mat");
+        printArray(mul);
+    }
 
     public static void main(String[] arg) {
         Scanner sc = new Scanner(System.in);
@@ -59,7 +78,10 @@ public class Matrix {
         System.out.println("Matrix2: ");
         printArray(arr2);
 
-        System.out.println("addMatrix: ");
-        add(arr, r1, c1, arr2, r2, c2);
+//        System.out.println("addMatrix: ");
+//        add(arr, r1, c1, arr2, r2, c2);
+
+        multiply(arr, r1, c1, arr2, r2, c2);
+
     }
 }
