@@ -9,7 +9,6 @@ public class TransposeMatrix {
             }
             System.out.println();
         }
-
     }
 
     static int[][] findTranspose(int[][] arr, int r, int c) {
