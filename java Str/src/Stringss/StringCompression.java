@@ -20,5 +20,6 @@ public class StringCompression {
         }
         ans += count;
         System.out.println(ans);
+//
     }
 }
