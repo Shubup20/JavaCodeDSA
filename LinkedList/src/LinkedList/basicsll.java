@@ -10,7 +10,6 @@ public class basicsll {
         }
         t.next = temp;
     }
-
     public static int length(Node a) {
         int count = 0;
         while (a != null) {
